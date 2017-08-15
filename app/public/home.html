@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="UTF-8">
 <head>
     <title> 
         Friend Finder
@@ -8,29 +9,33 @@
     <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="override.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-    <div class="jumbotron" style="background-color:#42b4e6">
-      <h1><span class="glyphicon glyphicon-heart"></span> BFF Finder</h1>
-      <h3>You are 10 questions away from finding a best friend forever!</h3>
-      <hr>
-    </div>
-
-        <a href="/view"><button type="button" class="btn btn-primary btn-lg btn-block">
-        <span class="glyphicon glyphicon-th-list">
-        </span> Quiz Me!</button></a>  
-
-      <footer>
-        <a href="/api/make">API BFF List</a>
-        <span class="glyphicon glyphicon-heart"></span>
-        <a href="/api/view">GitHub Repo</a> 
-      </footer>
+        <div class="jumbotron" style="background-color:#42b4e6">
+            <h1>
+                <span class="glyphicon glyphicon-heart">
+                </span>
+                    BFF Finder
+            </h1>
+            <hr>
+            <h3>
+                You are 10 questions away from finding a best friend forever!
+            </h3>
+        </div>
+        <a href="/survey">
+            <button type="button" class="btn btn-primary btn-lg btn-block">
+                <span class="glyphicon glyphicon-th-list">
+                </span>
+                Quiz Me!
+            </button>
+        </a>  
+        <footer>
+            <a href="/api/friends">API BFF List</a>
+            <span class="glyphicon glyphicon-heart"></span>
+            <a href="https://github.com/shelbina/FriendFinder">GitHub Repo</a> 
+        </footer>
   </div>
-</body>
-</html>
-
-
 </body>
 </html>
