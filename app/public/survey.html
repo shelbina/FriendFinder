@@ -7,9 +7,7 @@
     </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -19,19 +17,19 @@
     </div>
     <div>
 
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="POST" action="/api/friends">
             <fieldset>
                 <legend>Answer the questions below!</legend>
                 <div class="form-group">
                 <label for="bffName" class="col-lg-2 control-label">Name</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" id="bffName" placeholder="My name is...">
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="My name is...">
                 </div>
                 </div>
                 <div class="form-group">
                 <label for="bffImage" class="col-lg-2 control-label">Link to Your Image</label>
                 <div class="col-lg-10">
-                    <input type="url" class="form-control" id="bffImage" placeholder="URL to my photo...">
+                    <input type="url" class="form-control" id="photo" name="photo" required placeholder="URL to my photo...">
                 <hr>
                 </div>
                 </div>
@@ -39,9 +37,9 @@
 <!--Group of select questions ------>
                 <div class="form-group">
 <!--Question 1 ------>
-                <label for="quiz" class="col-lg-5 control-label">Question 1: I love going down the slide.</label>
+                <label for="question01" class="col-lg-5 control-label">Question 1: I love going down the slide.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="question 1">
+                    <select class="form-control" id="question01" name="scores[0]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -51,9 +49,9 @@
                 </div>
                 <p>
 <!--Question 2 ------>
-                <label for="select" class="col-lg-5 control-label">Question 2: I hate eating vegetables.</label>
+                <label for="question02" class="col-lg-5 control-label">Question 2: I hate eating vegetables.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="question02" name="scores[1]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -63,9 +61,9 @@
                 </div>
                 <p>
 <!--Question 3 ------>
-                <label for="select" class="col-lg-5 control-label">Question 3: I enjoy making and hiding in forts. </label>
+                <label for="question03" class="col-lg-5 control-label">Question 3: I enjoy making and hiding in forts. </label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="question03" name="scores[2]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -75,9 +73,9 @@
                 </div>
                 <p>
 <!--Question 4 ------>
-                <label for="quiz" class="col-lg-5 control-label">Question 4: Recess is better than math.</label>
+                <label for="question04" class="col-lg-5 control-label">Question 4: Recess is better than math.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="question 1">
+                    <select class="form-control" id="question04" name="scores[3]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -87,9 +85,9 @@
                 </div>
                 <p>
 <!--Question 5 ------>
-                <label for="select" class="col-lg-5 control-label">Question 5: I prefer riding scooters to bicycles.</label>
+                <label for="question05" class="col-lg-5 control-label">Question 5: I prefer riding scooters to bicycles.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="question05" name="scores[4]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -100,9 +98,9 @@
                 <p>
 
 <!--Question 6 ------>
-                <label for="select" class="col-lg-5 control-label">Question 6: I stick my tongue out at meanies.</label>
+                <label for="question06" class="col-lg-5 control-label">Question 6: I stick my tongue out at meanies.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="question06" name="scores[5]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -112,9 +110,9 @@
                 </div>
                 <p>
 <!--Question 7 ------>
-                <label for="quiz" class="col-lg-5 control-label">Question 7: Chocolate ice cream is the best flavor.</label>
+                <label for="question07" class="col-lg-5 control-label">Question 7: Chocolate ice cream is the best flavor.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="question 1">
+                    <select class="form-control" id="question07" name="scores[6]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -124,9 +122,9 @@
                 </div>
                 <p>
 <!--Question 8 ------>
-                <label for="select" class="col-lg-5 control-label">Question 8: I will let you play my Clash of Clans character. </label>
+                <label for="question08" class="col-lg-5 control-label">Question 8: I will let you play my Clash of Clans character. </label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="question08" name="scores[7]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -136,9 +134,9 @@
                 </div>
                 <p>
 <!--Question 9 ------>
-                <label for="select" class="col-lg-5 control-label">Question 9: I want to have a fidget spinner contest.</label>
+                <label for="question09" class="col-lg-5 control-label">Question 9: I want to have a fidget spinner contest.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="question09" name="scores[8]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -148,9 +146,9 @@
                 </div>
                 <p>
 <!--Question 10 ------>
-                <label for="select" class="col-lg-5 control-label">Question 10: I want to build a robot with my bff.</label>
+                <label for="question10" class="col-lg-5 control-label">Question 10: I want to build a robot with my bff.</label>
                 <div class="col-lg-7">
-                    <select class="form-control" id="select">
+                    <select class="form-control" id="question10" name="scores[9]">
                     <option>1 Nah man!</option>
                     <option>2 Kinda.</option>
                     <option>3 Maybe...</option>
@@ -161,9 +159,9 @@
                 </div>
                 <p>
 <!--End Questions ------>
-         <a href="/view"><button type="button" class="btn btn-primary btn-lg btn-block">
+         <a href="/view"><button type="button" class="btn btn-primary btn-lg btn-block" id="submit">
         <span class="glyphicon glyphicon-list-alt">
-        </span> Submit</button></a>               
+        </span> Find a BFF!!</button></a>               
             </fieldset>
             </form>
 
@@ -174,6 +172,56 @@
         <a href="/api/view">GitHub Repo</a> 
       </footer>
   </div>
+
+  <!--Begin Modal ------>
+<div class="modal" id="bestFriendModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Meet Your BFF!!</h4>
+        </div>
+        <div class="modal-body">
+          <p id="bestFriendName">One fine body…</p>
+          <img id="bestFriendImg" src="https://orig13.deviantart.net/d5bc/f/2011/151/6/2/629cbf0b6695e946104fae3e9a94bc39-d3hpzf0.png" 
+          onError="this.src='https://s-media-cache-ak0.pinimg.com/originals/47/2f/d7/472fd73adf375643f00dabbdd9693fb8.jpg'" width=500px alt="Best Friend">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">YAY! BFF's!!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Modal ------>
+  <!--Show friend ------>
+  <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+  <script type="text/javascript">
+	$('#submit').on("click", function() {
+		var userInput = {
+			name: $('#name').val().trim(),
+			photo: $('#photo').val().trim(),
+            scores: [$('#question01').val().trim(), 
+            $('#question02').val().trim(), 
+            $('#question03').val().trim(), 
+            $('#question04').val().trim(), 
+            $('#question05').val().trim(), 
+            $('#question06').val().trim(), 
+            $('#question07').val().trim(), 
+            $('#question08').val().trim(), 
+            $('#question09').val().trim(), 
+            $('#question10').val().trim()]
+		}
+		var currentURL = window.location.origin;
+		$.post(currentURL + '/api/friends', userInput, function(data) {
+			$("#bestFriendName").text(data.name);
+			$("#bestFriendImg").attr("src", data.photo);
+			$("#bestFriendModal").modal("show");
+		});
+		return false;
+	});
+</script>
+  <!--End Show friend ------>
 </body>
 </html>
 
